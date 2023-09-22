@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "@/components/Heading";
 import ShareLinkButton from "@/components/ShareLinkButton";
+import Image from "next/image";
 
 interface ReviewProps {
 	review: any;
@@ -10,12 +11,11 @@ const Review: React.FC<ReviewProps> = ({ review }) => {
 	return (
 		<>
 			<Heading>{review.title}</Heading>
-			<p className="italic pb-2">{review.date}</p>
 			<div className="flex gap-3 items-baseline">
 				<p className="italic pb-2">{review.date}</p>
 				<ShareLinkButton />
 			</div>
-			<img
+			<Image
 				src={review.image}
 				alt=""
 				width="640"

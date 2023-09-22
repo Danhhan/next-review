@@ -6,7 +6,7 @@ const Reviews: React.FC<{ reviews: any }> = ({ reviews }) => {
 	return (
 		<>
 			<Heading>Reviews</Heading>
-			<ul className="flex flex-col gap-3">
+			<ul className="flex flex-col md:flex-row gap-3">
 				{reviews?.map((review) => {
 					const { slug, title, image } = review;
 					return (

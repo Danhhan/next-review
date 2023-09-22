@@ -7,7 +7,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ review }) => {
-	const { slug, title, image } = review;
+	const { slug, title, image } = review || { slug: "" };
 	return (
 		<>
 			<Heading>Indie Gamer</Heading>
